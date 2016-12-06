@@ -1,3 +1,5 @@
+README from Lewuathe's lovely below is mostly applicable to my hacks. One should copy a spark 2 release without a bundled Hadoop to the hadoop-base directory. No guarantees the parameters as defined will match others' needs.
+
 # docker-hadoop-cluster [![Build Status](https://travis-ci.org/Lewuathe/docker-hadoop-cluster.svg?branch=master)](https://travis-ci.org/Lewuathe/docker-hadoop-cluster)
 
 Multiple node cluster on Docker for self development.
