@@ -103,13 +103,14 @@ RUN chown root:root /root/.ssh/config
 RUN ls -la /usr/local/hadoop/etc/hadoop/*-env.sh
 RUN chmod +x /usr/local/hadoop/etc/hadoop/*-env.sh
 RUN ls -la /usr/local/hadoop/etc/hadoop/*-env.sh
+RUN echo "export PATH=$PATH:/usr/local/spark/bin" > /root/.bashrc
+
+RUN echo "slave1\nslave2\nslave3\nslave4\nslave5" > /usr/local/spark/conf/slaves
 
 # fix the 254 error code
 RUN sed  -i "/^[^#]*UsePAM/ s/.*/#&/"  /etc/ssh/sshd_config
 RUN echo "UsePAM no" >> /etc/ssh/sshd_config
 RUN echo "Port 2122" >> /etc/ssh/sshd_config
-
-RUN service ssh start
 
 # Hdfs ports
 EXPOSE 9000 50010 50020 50070 50075 50090
