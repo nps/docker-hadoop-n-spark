@@ -76,15 +76,15 @@
 
   <property> 
     <name>yarn.scheduler.minimum-allocation-mb</name> 
-    <value>500</value>
+    <value>2000</value>
   </property>
   <property> 
     <name>yarn.scheduler.maximum-allocation-mb</name> 
-    <value>2000</value>
+    <value>6000</value>
   </property>
   <property> 
     <name>yarn.nodemanager.resource.memory-mb</name> 
-    <value>2000</value>
+    <value>6000</value>
   </property>
     <!-- NAMENODE must be same to RESOURCEMANAGER in this configuration -->
     <!-- Disable due to HDFS initialization timing issue
